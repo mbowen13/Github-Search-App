@@ -11,14 +11,14 @@ export class GithubService {
   constructor(private _http: Http) {}
   
   getUser() {
-    var URL = 'http://api.github.com/users/' + this.username + '?client_id=' + this.client_id + '&client_secret=' + this.client_secret;
+    var URL = 'https://api.github.com/users/' + this.username + '?client_id=' + this.client_id + '&client_secret=' + this.client_secret;
     console.log(URL);
     return this._http.get(URL)
     .map(res => res.json());
   }
   
   getRepos() {
-    var URL = 'http://api.github.com/users/' + this.username + '/repos?client_id=' + this.client_id + '&client_secret=' + this.client_secret;
+    var URL = 'https://api.github.com/users/' + this.username + '/repos?client_id=' + this.client_id + '&client_secret=' + this.client_secret;
     console.log(URL);
     return this._http.get(URL)
     .map(res => res.json());
