@@ -2,3 +2,5 @@
 
 
 ## Installation 
+
+`git clone`
